@@ -1,1 +1,1 @@
-# kar_math_server
+# KarMath Server
