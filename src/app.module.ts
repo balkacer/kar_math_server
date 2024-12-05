@@ -8,8 +8,10 @@ import { CalcModule } from './modules/calc/calc.module';
     ConfigModule.forRoot({
       envFilePath: '.env',
     }),
-    MongooseModule.forRoot(process.env.MONGO_URI),
-    CalcModule
+    MongooseModule.forRoot(process.env.MONGO_URI, {
+      dbName: process.env.ENV,
+    }),
+    CalcModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}

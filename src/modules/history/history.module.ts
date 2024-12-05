@@ -6,11 +6,14 @@ import { User, UserSchema } from 'src/models/User.model';
 import { HistoryItem, HistoryItemSchema } from 'src/models/HistoryItem.model';
 
 @Module({
-  imports: [MongooseModule.forFeature([
-    { name: User.name, schema: UserSchema },
-    { name: HistoryItem.name, schema: HistoryItemSchema },
-  ])],
+  imports: [
+    MongooseModule.forFeature([
+      { name: User.name, schema: UserSchema },
+      { name: HistoryItem.name, schema: HistoryItemSchema },
+    ]),
+  ],
   controllers: [HistoryController],
   providers: [HistoryService],
+  exports: [HistoryService],
 })
-export class HistoryModule { }
+export class HistoryModule {}

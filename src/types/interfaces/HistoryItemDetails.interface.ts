@@ -1,9 +1,11 @@
 import Operation from '../enums/Operation.enum';
 
-interface IOperationDetails {
+interface IHistoryItemDetails {
+  owner: string;
   leftValue: number;
   rightValue: number;
   op: Operation;
+  result: number;
 }
 
-export default IOperationDetails;
+export default IHistoryItemDetails;

@@ -13,8 +13,11 @@ export class HistoryItem {
   @Prop({ required: true })
   leftValue: string;
 
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true })
   rightValue: string;
+
+  @Prop({ required: true })
+  result: string;
 
   @Prop({ required: true, enum: Operation })
   op: Operation;
